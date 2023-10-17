@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Loader } from '@googlemaps/js-api-loader';
+import { environment } from 'src/environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
@@ -8,10 +9,11 @@ export class GoogleMapsService {
 
   private loader: Loader;
   
+  
  
   constructor() {
     this.loader = new Loader({
-      apiKey:"AIzaSyAaM6KfzfrO34ELUr-szwMP5BDS17q4Fgo", // poner la clave en enviroments y agregar enviroments en .gitignore
+      apiKey: environment.apiKey, 
       version: "weekly"
     });
 
