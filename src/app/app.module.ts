@@ -5,7 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MapaComponent } from './components/mapa/mapa/mapa.component';
 import { GoogleMapsService } from './services/google-maps.service';
-import { EstablecimientoComponent } from './establecimiento/establecimiento/establecimiento.component';
+import { EstablecimientoComponent } from './components/establecimiento/establecimiento.component'; 
+import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { environment } from 'src/environments/environment.development';
+import { FirestoreModule } from '@angular/fire/firestore';
+
 
 @NgModule({
   declarations: [
@@ -15,10 +20,16 @@ import { EstablecimientoComponent } from './establecimiento/establecimiento/esta
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FirestoreModule,
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+    provideFirestore(() => getFirestore()),
+    
+    
   ],
   providers: [
-    GoogleMapsService
+    GoogleMapsService,
+    
   ],
   bootstrap: [AppComponent]
 })
