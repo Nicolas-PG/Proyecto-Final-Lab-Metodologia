@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Loader } from '@googlemaps/js-api-loader';
 import { map } from 'rxjs';
 import { environment } from 'src/environments/environment.development';
+import { Establecimiento } from '../models/establecimiento';
 
 @Injectable({
   providedIn: 'root'
@@ -81,6 +82,38 @@ export class GoogleMapsService {
         infoWindow.open(map);
 
     }
+
+    agregarMarcadores(establecimientos: any[], mapa:google.maps.Map):void {
+      
+      establecimientos.forEach(establecimiento =>{
+        const marker = new google.maps.Marker({
+          position: {lat: establecimiento.latitud, lng: establecimiento.longitud},
+          map: mapa,
+          title: establecimiento.nombre
+
+        });
+
+        const menuUrl = establecimiento.menu;
+
+        const infoWindowContentent = `
+        <strong>${establecimiento.nombre}</strong><br>
+        ${establecimiento.direccion}<br>
+        <a href="${menuUrl}" target="_blank">Ver Menú</a>
+      `;
+
+      const infoWindow = new google.maps.InfoWindow({
+        content: infoWindowContentent
+      });
+
+      marker.addListener('click', () => {
+        infoWindow.open(mapa, marker);
+      });
+
+      });
+
+    }
+
+
     
    
 

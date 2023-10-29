@@ -12,6 +12,8 @@ import { environment } from 'src/environments/environment.development';
 import { FirestoreModule } from '@angular/fire/firestore';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
+import { EstablecimientoService } from './services/establecimiento.service';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 
 
 
@@ -27,13 +29,14 @@ import { AngularFireModule } from '@angular/fire/compat';
     FirestoreModule,
     provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
     provideFirestore(() => getFirestore()),
-    AngularFirestoreModule,
-    AngularFireModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireStorageModule,
     
     
   ],
   providers: [
     GoogleMapsService,
+    EstablecimientoService
     
   ],
   bootstrap: [AppComponent]

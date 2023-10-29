@@ -17,6 +17,8 @@ export class EstablecimientoService {
   }
 
   getEstablecimiento(): Observable<Establecimiento[]> {
-     return this.firestore.collection<Establecimiento>('establecimientos').valueChanges();
+    console.log(this.firestore.collection<Establecimiento>('Establecimientos').valueChanges());
+     return this.firestore.collection<Establecimiento>('Establecimientos').valueChanges();
+     
   }
 }
