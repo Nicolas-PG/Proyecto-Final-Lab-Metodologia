@@ -96,9 +96,13 @@ export class GoogleMapsService {
         const menuUrl = establecimiento.menu;
 
         const infoWindowContentent = `
+        <div style="width: 300px; height: 450px;">
         <strong>${establecimiento.nombre}</strong><br>
         ${establecimiento.direccion}<br>
+        <iframe src="${menuUrl}" width="300" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        <br>
         <a href="${menuUrl}" target="_blank">Ver Menú</a>
+        </div>
       `;
 
       const infoWindow = new google.maps.InfoWindow({
