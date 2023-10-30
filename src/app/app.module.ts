@@ -19,6 +19,7 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { SignUpComponent } from './components/autenticacion/sign-up/sign-up.component';
 import { DashboardComponent } from './components/autenticacion/dashboard/dashboard.component';
 import { LoginComponent } from './components/autenticacion/login/login.component';
+import { AuthService } from './services/auth.service';
 
 
 
@@ -40,14 +41,16 @@ import { LoginComponent } from './components/autenticacion/login/login.component
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireStorageModule,
     provideAuth(() => getAuth()),
+   
     
-    AngularFireModule.initializeApp(environment.firebase)
+    
 
     
   ],
   providers: [
     GoogleMapsService,
-    EstablecimientoService
+    EstablecimientoService,
+    AuthService
     
   ],
   bootstrap: [AppComponent]
