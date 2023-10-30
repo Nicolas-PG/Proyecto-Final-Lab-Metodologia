@@ -48,6 +48,21 @@ export class GoogleMapsService {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude,
               };
+
+              /*
+              const marker = new google.maps.Marker({
+                position: {lat: position.coords.latitude,
+                  lng: position.coords.longitude},
+                  map: map,
+                  title: "Mi ubicación"
+              });                                             FUNCION PARA AGREGAR MARCADOR A LA UBICACION
+
+              marker.addListener('click', function() {
+                
+                marker.setMap(null);
+              });
+              */
+
     
               const infoWindow = new google.maps.InfoWindow;
               infoWindow.setPosition(pos);
@@ -85,11 +100,14 @@ export class GoogleMapsService {
 
     agregarMarcadores(establecimientos: any[], mapa:google.maps.Map):void {
       
+      var iconBase = 'assets/images/';
       establecimientos.forEach(establecimiento =>{
         const marker = new google.maps.Marker({
           position: {lat: establecimiento.latitud, lng: establecimiento.longitud},
           map: mapa,
-          title: establecimiento.nombre
+          title: establecimiento.nombre,
+          icon: iconBase + this.tipoEstablecimiento(establecimiento)
+          
 
         });
 
@@ -119,7 +137,24 @@ export class GoogleMapsService {
 
 
     
-   
+   private tipoEstablecimiento(establecimiento: any): string{
+    const categorias = establecimiento.categorias
+
+    for(let i = 0; i < categorias.length; i++){
+      const categoria = categorias[i];
+      switch(categoria){
+        case 'cafe':
+          return 'markCafe.png';
+  
+        case 'hamburguesa':
+          return 'markBurger.png';  
+        
+      }
+
+    }
+    return "...";
+    
+   }
 
    
 
