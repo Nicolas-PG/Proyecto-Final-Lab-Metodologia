@@ -1,0 +1,48 @@
+/* Estilo para el contenedor principal */
+.container {
+    max-width: 400px; /* Ancho máximo de la burbuja */
+    margin: 0 auto; /* Centrar horizontalmente */
+    padding: 20px; /* Espaciado interno */
+    background-color: #f5f5f5; /* Fondo gris claro */
+    border: 1px solid #ccc; /* Borde ligero */
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center; /* Centrar el contenido */
+  }
+  
+  /* Estilo para el título */
+  h1 {
+    font-size: 24px;
+    margin: 0 0 10px; /* Espacio inferior */
+  }
+  
+  /* Estilo para el mensaje de descripción */
+  p {
+    font-size: 16px;
+    margin: 0 0 20px; /* Espacio inferior */
+  }
+  
+  /* Estilo para el cuadro de consulta */
+  #consulta {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc; /* Borde ligero */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #f5f5f5; /* Fondo gris claro */
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Estilo para el botón de enviar */
+  button {
+    background-color: #007BFF; /* Fondo azul claro */
+    color: #fff; /* Texto blanco */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  /* Cambiar el estilo del botón al pasar el mouse sobre él */
+  button:hover {
+    background-color: #0056b3; /* Fondo azul más oscuro en hover */
+  }

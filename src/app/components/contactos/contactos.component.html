@@ -1,0 +1,10 @@
+<div class="container">
+    <h1> Consultas</h1>
+    <p>Por favor, déjanos tu consulta y te responderemos a la brevedad.</p>
+    <form (ngSubmit)="enviarConsulta()" #consultaForm="ngForm">
+      <label for="consulta">Tu consulta:</label><br>
+      <textarea id="consulta" name="consulta" [(ngModel)]="consulta" rows="5" cols="50" placeholder="Escribe tu consulta aquí" required></textarea><br><br>
+
+      <button type="submit">Enviar Consulta</button>
+    </form>
+  </div>

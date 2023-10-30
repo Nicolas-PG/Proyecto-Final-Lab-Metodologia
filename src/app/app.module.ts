@@ -15,10 +15,11 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { EstablecimientoService } from './services/establecimiento.service';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { provideAuth,getAuth } from '@angular/fire/auth';
-
+import { FormsModule } from '@angular/forms';
 import { SignUpComponent } from './components/autenticacion/sign-up/sign-up.component';
 import { DashboardComponent } from './components/autenticacion/dashboard/dashboard.component';
 import { LoginComponent } from './components/autenticacion/login/login.component';
+import { ContactosComponent } from './components/contactos/contactos.component';
 
 
 
@@ -29,9 +30,12 @@ import { LoginComponent } from './components/autenticacion/login/login.component
     EstablecimientoComponent,
     LoginComponent,
     SignUpComponent,
-    DashboardComponent
+    DashboardComponent,
+    ContactosComponent
+   
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     FirestoreModule,

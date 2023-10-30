@@ -15,4 +15,10 @@ export class DashboardComponent {
   logOut() {
     this.authService.logOut();
   }
+
+  consola(){
+
+    alert("anda");
+
+  }
 }
