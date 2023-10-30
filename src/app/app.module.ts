@@ -14,6 +14,11 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
 import { EstablecimientoService } from './services/establecimiento.service';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+
+import { SignUpComponent } from './components/autenticacion/sign-up/sign-up.component';
+import { DashboardComponent } from './components/autenticacion/dashboard/dashboard.component';
+import { LoginComponent } from './components/autenticacion/login/login.component';
 
 
 
@@ -21,7 +26,10 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
   declarations: [
     AppComponent,
     MapaComponent,
-    EstablecimientoComponent
+    EstablecimientoComponent,
+    LoginComponent,
+    SignUpComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +39,10 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
     provideFirestore(() => getFirestore()),
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireStorageModule,
+    provideAuth(() => getAuth()),
     
+    AngularFireModule.initializeApp(environment.firebase)
+
     
   ],
   providers: [
