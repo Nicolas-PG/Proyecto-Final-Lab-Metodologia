@@ -49,25 +49,26 @@ export class GoogleMapsService {
                 lng: position.coords.longitude,
               };
 
-              /*
+              
               const marker = new google.maps.Marker({
                 position: {lat: position.coords.latitude,
                   lng: position.coords.longitude},
                   map: map,
                   title: "Mi ubicación"
-              });                                             FUNCION PARA AGREGAR MARCADOR A LA UBICACION
+              });                                            // FUNCION PARA AGREGAR MARCADOR A LA UBICACION
 
               marker.addListener('click', function() {
                 
                 marker.setMap(null);
               });
-              */
+              
 
-    
+              /*
               const infoWindow = new google.maps.InfoWindow;
               infoWindow.setPosition(pos);
               infoWindow.setContent("Ubicacion encontrada.");
               infoWindow.open(map);
+              */
               map.setCenter(pos);
             },
             () => {
@@ -147,7 +148,10 @@ export class GoogleMapsService {
           return 'markCafe.png';
   
         case 'hamburguesa':
-          return 'markBurger.png';  
+          return 'markBurger.png';
+        
+        case 'restaurante':
+          return 'markPasta.png';
         
       }
 
