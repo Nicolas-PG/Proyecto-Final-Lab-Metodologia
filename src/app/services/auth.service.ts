@@ -15,7 +15,7 @@ export class AuthService {
     private router: Router,
     private ngZone: NgZone
   ) {
-    // OBSERVER save user in localStorage (log-in) and setting up null when log-out
+    
     this.firebaseAuthenticationService.authState.subscribe((user) => {
       if (user) {
         this.userData = user;
@@ -27,7 +27,6 @@ export class AuthService {
 
   }
 
-  // log-in with email and password
   logInWithEmailAndPassword(email: string, password: string) {
     return this.firebaseAuthenticationService.signInWithEmailAndPassword(email, password)
       .then((userCredential) => {
@@ -39,7 +38,7 @@ export class AuthService {
       })
   }
 
-  // log-in with google
+ 
   logInWithGoogleProvider() {
     return this.firebaseAuthenticationService.signInWithPopup(new GoogleAuthProvider())
       .then(() => this.observeUserState())
@@ -48,7 +47,7 @@ export class AuthService {
       })
   }
 
-  // sign-up with email and password
+  
   signUpWithEmailAndPassword(email: string, password: string) {
     return this.firebaseAuthenticationService.createUserWithEmailAndPassword(email, password)
       .then((userCredential) => {
@@ -68,13 +67,13 @@ export class AuthService {
 
   
 
-  // return true when user is logged in
+ 
   get isLoggedIn(): boolean {
     const user = JSON.parse(localStorage.getItem('user')!);
     return user !== null;
   }
 
-  // logOut
+
   logOut() {
     return this.firebaseAuthenticationService.signOut().then(() => {
       localStorage.removeItem('user');
