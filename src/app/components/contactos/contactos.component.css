@@ -1,5 +1,6 @@
-/* Estilo para el contenedor principal */
+
 .container {
+
   max-width: 400px; /* Ancho máximo de la burbuja */
   margin: 0 auto; /* Centrar horizontalmente */
   padding: 20px; /* Espaciado interno */
@@ -42,9 +43,4 @@ button {
   border: none;
   border-radius: 10px;
   cursor: pointer;
-}
-
-/* Cambiar el estilo del botón al pasar el mouse sobre él */
-button:hover {
-  background-color: #0056b3; /* Fondo azul más oscuro en hover */
 }
