@@ -1,0 +1,51 @@
+
+  
+  
+  
+  
+   <router-outlet> <body class="bg-gray-100">
+      <!-- Imagen en la parte superior -->
+      <img src="https://i.pinimg.com/564x/60/bf/7c/60bf7c84a3f4bb95b2a4d0697bbedbae.jpg" alt="Imagen Superior" style="height: 10rem; width: 100vw;">
+
+
+  
+      <!-- Navbar --><router-outlet>
+      <nav class="bg-gradient-to-r from-blue-500 to-gray-200 p-4">
+          <div class="flex justify-between items-center">
+              <div class="flex items-center">
+                  <!-- Logo en la punta derecha -->
+                  <div class="ml-auto">
+                      <img src="https://i.pinimg.com/564x/2c/45/af/2c45afd69e665bc8d81c5846a5c37c2f.jpg" alt="Logo" class="w-12 h-12">
+                  </div>
+                  <!-- Botones del lado izquierdo -->
+                  <ul class="ml-4 space-x-4">
+                      <li class="inline-block">
+                          <a href="#" class="text-white">Locales Aderidos</a>
+                      </li>
+                    
+                      <li class="inline-block">
+                          <a href="/signup" class="text-white">Registrate</a>
+                      </li>
+                      <li class="inline-block">
+                          <a href="/contactos" class="text-white">Contactanos</a>
+                      </li>
+                      <li class="inline-block">
+                          <a href="/inicio" class="text-white">Mapa MdQmorfo</a>
+                      </li>
+                  </ul>
+              </div>
+              <!-- Botones de "Login" y "Log Out" en la punta derecha -->
+              <div class="ml-auto">
+                  <button class="bg-white text-blue-500 hover:bg-blue-100 text-sm font-semibold px-4 py-2 rounded-full">Login</button>
+                  <button class="bg-white text-blue-500 hover:bg-blue-100 text-sm font-semibold px-4 py-2 rounded-full">Log Out</button>
+              </div>
+          </div>
+      </nav>
+    </router-outlet>
+      <!-- Map Section -->
+
+      <div class="container mx-auto p-4">
+
+      </div>
+     
+  </body></router-outlet>

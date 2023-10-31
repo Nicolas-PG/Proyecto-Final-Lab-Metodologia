@@ -1,10 +1,112 @@
-<div class="container">
+
+
+
+ 
+<!--
+
+
+<div class="bg-white">
+  <header class="absolute inset-x-0 top-0 z-50">
+    <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <div class="flex lg:flex-1">
+        <a href="#" class="-m-1.5 p-1.5">
+          <span class="sr-only">Your Company</span>
+          <img class="h-10 w-auto" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxASEhUQEhIWFRUVFRUWFRgVFhcWFxUVFRYXFxUWFxcYHikiGBsmHBUWIjIiJiosLzAvFyA0OTQuOCkuLywBCgoKDg0OGxAQHDEmICYwLi4uLi4vNi4uLi4uLi4uLi4uLi4wLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLv/AABEIAOEA4QMBIgACEQEDEQH/xAAbAAEAAQUBAAAAAAAAAAAAAAAABwECAwUGBP/EAE4QAAEDAgIECQYHDgQHAAAAAAEAAgMEEQUhBhIxQQcTUVJhcYGRoRQWIpKx8DJTVHLBwtEVIzM0QkNigoOTotLh4hdjo9MkRFWUsrPx/8QAGgEBAAIDAQAAAAAAAAAAAAAAAAIDAQQFBv/EAD0RAAIBAgIFCQYEBAcAAAAAAAABAgMRBCESFDFRkRNBUmGBobHR8AUVMnHh8SJCosGCksLiIyQzQ1NUY//aAAwDAQACEQMRAD8AmhERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREARFa5yAOcjAqNar0AREQBERAEREAREQBERAERUc5AUc5GDeqNby+5V6AIiIAiIgCIiAIiIAiIgCLDV1UcTDJK9sbBtc9wa0dpyXJVvCXQNdxcHG1cnNpoi/tu6wI6W3WG0tpKMJS+FXOzVNX36Vw3nLjM34vhbYgdjqqUDvjGq4dWawyjHX/hcQoqbohZxju6Rv0qLqRRYqEm7XXG/hckBLKNThdU78LjlQ7ohi4rxa6yxO0eiOTsSxN/7YDwddUvFUltaLVgqj2eD/dIlDVPImqeRRX5tUe+oxE9dQz6Gq3zZo901f/3Lf9tY1ylv9cCeoz6+H1JWsqKKho/EPgV2JM6qgfQ0K7yWuj/A4vU9U0Uc3i+T6E1yjvMajV9fS5KaKL26SY1Cc3UtSORzHxSOy5QGsB7SthS8KMTCG1lJNT/pttLF6zbHsAKshXpz2MrlhK0eb18tvcSAi8OEYxTVTOMp5mSt36huW9Dm7WnoIC9yuNbqCIiAKmqqogCIiAIiIAiIgLXOVyIgCIsNZVRxRulkcGsY0uc47A0ZkoCtVUsiY6SR7WMaLuc4gNaOUkrhZtL62ucYsKiAjBs6rqAWxg7+LYR6R6welo2rx0tNNjMnlVVrR0DCeIguW8bq/nZSN2X0DeXbysxQNaIacBkbRqjVAbkNgYB8Fq1a2IUFf7s3aOGcna133Lzfr5ag6HUjX8diFRLWz7bPcQxu+zY2nIdBNjbYtozEhE3i6aGOFnIxrR4Cw8CtctjXVtO5gZHBqOyu42uO0Zu7VzniJ1E3pKNuL7fsdB0YwcU05eC7NiPJNVyP+E8noJy7hksHcqqlvfJabd9puKyyQ7F7cMxB0Di5rWuuLZ3uOojZ/wDF4ldFE5x1WguPI0EnuClCUoyTjtIThGcXGWwyVdSZHmRwF3HYBYciw9yq9habEEEbQQQR2KqxKTk23tJQilFKOwsJ6lcqIsGSpbfLl5Tl4rNjGjToWB+uzPLVuc78lxmFhVqlHQs9JXfNnsISVS60XZc+W05WowJjX8bC51NMNj4jq97RkR1WuujwHhBmgc2DFGjVcdVlVGPRJ3ca0bD0gDqtcrJPCHCx7CtRVU4IMb2hwORBzBCto4upSeeaI1cPTrL8SzJdjka4BzSCCAQQbgg5ggjaFcoh0Rx52GTNppnl1FM60bnG/k0h3E8w7+/Kzry8u5SqRqR0onBr0JUZaMgiIrCkIiIAiIgCIiAIiIAuC08c6sq6bCGkiN3/ABNWRl95YfRZfpcO8sK71R7o8/WxPFqo58WY4Gk7msaddo7YmFQqOyLqCzclzeOxG2xurDbU8YDWNABDbAAAeiwDkAt7hahUcSSXHaSSes5ovPVajqScmd+lTVOKivTCX97Jf3sstPM5jg9trtNxfMX6lBFjyWRa+Nw+ECOsEe1Wd69uI4lJPq6+qA29g0WFztOZK8V/e6lNRUrQd1vIU3JxvNWfzuPfYs9NVyREljy2+22/rBuFh99qoViMnF3TszMoqSs1kXyyOeS5x1nHaSblWIiNtu7MpJKyFve6IffJFgyFVUVHFAeiibEXgSuLWZ3IF/t71jx6mgv94c5wAuSfYDYdaxBqvU9JaDjoq+/nK9B6alpP5cxz1dSNmjdE/Y4W6juI6Qc12PBZjL56V1PMbzUjuJfc3LmC/FP7gW336l965mpj1XEbt3UrtB5+KxhzPyammJI5ZIjkexrHestn2dUtU0OZlOPpqVFy3ZkroiLtnACIiAIiIAiIgCIiAo4qOMB9CrxqE7eNZKOkSte4+Bb3qSFGnCPR1NHJNi1PLGxr4I4JmvaXF7i8Nu0Wt8ENzJy1TyqqtFuDsbGGa07Pnt4p/sehFwFVj2JRuLDJBcZOGrfUdvYSBYuGw2JF8rrD5y4h8ZD6i4uqz3o9JGnOSUlF5kioo685cQ+Mh9T+ir5y4j8ZD6iarLejPJVOiyQyFW6jrzlxH4yH1P6J5y4h8ZD6iatLejPI1OiSIT1Io6Ok2JfGQ+r/AETzmxHnxeoPsTVpb0Y5Gp0WSMqKOfOfEedF6g+xDpNiPPi9T+iarPehyVToskZFHQ0lxH4yH1P6KvnNiHxkPqJq0t6HI1OiyQyVQBR75y4h8bD6iecuIfGQ+omrS3ocjU6L9dpIqKO/ObEPjIfUVPObEfjIvUTVZb0ORqdFnb4i3YesfZ7SvBgIJxijA3R1DnfNMTx7VyFXpRXZBz4+XJgXY8Dh8oq56qZ4M0ULY2MAt6D3El/e2363Ur8LhpRqqTsa2MvToy0l1cSXkRF2DzYREQBERAEREAREQBR5wp4myeM4TTtdNVSFjtSOx4prHB+tIdjbgbOm5sLX32nuPTUdMTTxvknku2PVY54ZlnI6wOQ3A7SRuuuD0a0qo8OiOvT1nlMxvNNLEwGSRxuQCZLkXJsN+0qjEVdCLyv8szZoUm7TSvnl8976vE4uqhqg48ZSVDXEkuvC8Zk3O0LxvrWNNnXaeRzbHuUnScIdGPScyoF97ogM/XWJ3CRh52tqD+zb9L15xe0MVd/5d25tq/bw7z0EMdWtsT7GRr5fFzh3H7FXy6LneB+xSDJwgYaf+XmP7GH6ZFiGnuGfJJf3FP8A7qmvaNf/AK8vXYWa/V6PicF5fFz/AAP2J90Iuf4FSFHp7hfyeRvXBD9DivVFpzhJ36vXTu+q0p7wrr/Yl67Br9XorvIyOIRc7wKp90Yud4KX6bSfDX/BqYc+ceLPc8BbqFzHDWYQ4crSCO8LWqe25U3aVJr5tr+kj7wqbkQP90Yud4Kn3Qi53gp8QtVfv/8A8/1f2jX6m5ECeXxc7wKCvi53gfsU8mNvNHcCrDTR8xvqj7FL3/H/AI3x+hn3hU3IgsV0XP8Ab9ir5bHz/apwNBAfzMZ/UYfoWCpo6ONpfJFTsaNrnsjaB2kWWV7ejf8A03x+g94T3Ihby6PnjuKsOIRc7wKkau0vwiI2ZE2U/wCVAy3rP1QR1XWtk4SWNP3mit0ue1ngxh9q3YYzFTV44d9skvFB4+puRxNQHuGu2OQtaLl2o7VA5SdgCkngOwt2tPWlzdUsELWhwLr6wcXPaDdg9EWvtuTssToajhOq/wAmCIfOMjvYQtngmiWJ1Do8SpJaKm123Dqd0rNYE+kHxlrmk3BBabZg3W/hKmIc/wDEpWXVJPjkuJoYzEOrC0pJX9dZM6Lz4eJhG0TlhkA9MxghhPKA7MdS9C6pwgiIgCIiAIiIAiIgF1wGmDeOxahhdmyKKWex2F+bWnrBY0jqXfrgOEIOpaujxQgmGPWp6iwuWMkvqvsNwLndoaN6jPYW0V+Prs/Bkc6d48+eoeC48VE8xxtvl6J1XP27SQc+SwWgjfrC6y1DgXuINwXONxmDdxzVq1HmbySWQsqXWJmvfPVt0LMgKXRFVDJhlivsa08t8vYr4WFh1o3OjdyscWnvGavVEJKUlzm5oNMcRhy40TN5Jm6x9YWd3ldVhnCTA70amJ8J5w++R+A1h1WPWo9VpXOr+y8LV2xs96y+j7UySqbyc6GvhmbrwyNkbysII6jbYegr0KBYHPidxkL3RPH5TCWnqNto6F1VBwh1cbHNljbK7VOpIPROtb0eMaBZwvbZZcTEewq0Xei9JcH5P1kWKSew6rTDS5lGOKYBJUOF2t/JYDsdJbO3Rv6NqjDEauapfxlRIZHbgTZjehrRkB1LEXPc50kji6R5LnuO0ko4jeV3cD7Pp4WN1nLnfluXjzkJTtsMUwAb3LzKrpXHbYdSouhaxQ8yxt96mTgLr3OhqKY3IikZI2+4TBwIHILxX/WPKodJU1cCmCPippal4LfKXM1Ad8UYdqv6iXutygA71ZD4iFW3JSv1cftckdERbBoBERAEREAREQBERAFx2nWOyhzMMpY2y1NS03EgDo4oTcOkkBuCMjkQRkcjkD2KjySrjpcaq5KhwaJaNj4XvIaNSMN12AneSxx/VUKjsiykk23a9le3riaKq4NKOCMB9VNx1rnUazVPTqbQOty5+TQqQfBqAeTWZbvsStvNpLNUvd5LTunz9KV3oR36L7erI5bFR1RirM3U0Eg5I36rv4nZ9gK4s61dyysup2v23NuMcbLPxt+6NGdDavdND3v/AJVTzOqvjYe9/wDKt7FpVADqTtkp38krCB2EDZ0kBbWKuieLska4crXB3sVU6+Ih8WXYUTr4in8St/CvscgNDKnfNF2Bx+qrxoXP8oZ2MK6/ypnL4FWOrGdJ7FXrVbf3ENcq9X8q8jlPMqT5SP3f9yqNCJPlX+n/AHrpfLORveVqqvSmJrtRp4x+5sLdc9+xSjXrydovuXkShiK83aOf8K8jweZLvlR/d/3p5kSfKv8AT/uXtGI4i/OOjeB/mObGfVNiFQy4oMzSX6p23/8AIqzTxHPJcYmxoY18y/SeE6Ey7qkfu/7lYdDJ91RH2tI9gK9p0ifF+MRTQ9Lm3Z6xGfYFtKTFhKNaN7Xjo3dY3dqjKtiIq78Mu4pnWxNP41+leKVu85l2htXumh73j6ixHQur58J/Xf8AyLsDWP6O5YKmtDRrSSBo/ScGjxUVi63M+4rWLqPdwRybtEKgfCkh6g95+ojNEpfypWj5oLvbZbY4815IghmmDdrmM9Edv2hUbpDEDqyslhJ2cYwgHuz8FdyuJ9JF98Va+j+lfcxQ6K02qRIZXOOxzXtYG/qljr9/cpF4MtIZ5uOoal2vNT6pY+1jJC7IEjlbkL/pDaQSeShma8azHBzeVpBHeF79AATjDyN1E7W7ZWW+hW4GvUdXRkyhVZ1FKM3eyuup5bCWURULl2Soo5yM5VRozz9yr0AREQBERAEREAWm0k0XpK9rW1MesWa2o4FzXMLhY5tIuMgbHLILcojVzKbTunYh/RqpfHrYdPZs9KTGRs1473Y9vKLOHZqnet7db7S7Q6Gu1ZA50NTGPvc7PhDka4ZazczltFzY5m/E1QxOiyqqU1EY/P0o1rjlfHbI9jR1rkYnBT0nKGZ28PjITik8mbSeJj26r2tc07nAOHcVo6rRCiedZrXRO5YnlpHUDcDsCzUeldDJsnDTySAst2kW8VtYKlj82Pa75rg72FaV509l0bmRzbtFqhv4KukA5JG8Z/ET9Ct+4GIbPK4+vihf2WXV2KonKt7bcEVPDUntiuC8jl26Jvf+M1ckjeYxvFNPQbXuOwLf4fh8MDdWGNrBvsMz1uObu0r0++5FiU21Z+S4IsjCMVaKsVVLKqKJIoeTdv6Vo63ROjkdrBhidzonanbaxb4LeH3zWGWqY3affrSM3F/hYtc0A0Ob8rqrcnGD+VZodE6GP03MMhG+ZxdfrAs09y9FVj0LcjJG35z237rrT1Gk9Le3Gl7jkAxrnEncBkArFKq8o3MKEVsN3NKCAxrQ1g2AAAdwyHUvNUamqdfV1LelrW1bdN8lgpIsTqfxagkaD+cqPvTR02Ni4dRK6HC+DN0hEmJVBmsbiCG7IQf0nZOd2Bp6SraeAqzd3kU1cZRprbf5HK6JaJmunkmpnPpaZg1RKzWHGy3/ACWkj0BvGWwcuUkaF6ICgM0r5zUTTFodIWBlmMHotDdY9pvuHIulpqdkbGxxtDGNADWtADWgbAANgWRdmFKMLb0cWviZ1W3zMK0tVyK01wiIgCIiAIiIC1zlciIAiIgCIiA8GI4JSVH4enilPK+NriOpxFwufq+DLB5DfyXVP6EkjfDWt4Lr0WGk9pKM5R+F2OEPBXRD8HUVkXQyZtvFhVh4MWj4OJVw/ag+wBd8ii6cXtRYsRVX5mR+eDR+7Fa3teT9ZW/4aS/9Wq+/+5SEihyFPoolrVbpEfjg0fvxWt7HkfWV3+GTT8LEa4/tR9N13yLKo01+VGHiar/MzgDwWUl7vqq1/wA6Zuf8F16IuCjCRm6KR/z5n/Vsu3RTUIrmI8vV6TObpdAsJj+DRRH5+tJ/7CVu6LD4YRaGKOIckbGsHc0BelFmxW5SltdwiIsmAiIgCIiAIiIAiIgCIiAIiIAiK17kBUuVVY1u8q9AEREAREQBERAEREAREQBEVrnWQFS6yqrGt3lXoAiIgCIiAIiIAiIgCIiAIiICjirQ26vRAEREAREQBERAEREAREQBERAUcVaG3V6IAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAioQgCAqiIgCIiAIiIAiIgCIiAIiIAgKFUaEBVERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQH//Z" alt="">
+        </a>
+      </div>
+      <div class="flex lg:hidden">
+        <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+          <span class="sr-only">Open main menu</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+      <div class="hidden lg:flex lg:gap-x-12">
+        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Locales Aderidos</a>
+        <a href="/contactos" class="text-sm font-semibold leading-6 text-gray-900">Contactanos</a>
+        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Club MdQmorfo</a>
+        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Registrate</a>
+      </div>
+      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+        <a href="/login" class="text-sm font-semibold leading-6 text-gray-900">Login <span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </nav>
+    
+    <div class="lg:hidden" role="dialog" aria-modal="true">
+
+      <div class="fixed inset-0 z-50"></div>
+      <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <div class="flex items-center justify-between">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Your Company</span>
+            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
+          </a>
+          <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+            <span class="sr-only">Close menu</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="mt-6 flow-root">
+          <div class="-my-6 divide-y divide-gray-500/10">
+            <div class="space-y-2 py-6">
+              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Product</a>
+              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Features</a>
+              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Marketplace</a>
+              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Company</a>
+            </div>
+            <div class="py-6">
+              <a href=[login] class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 ">Logsas in</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>-->
+<!--
+  <div class="relative isolate px-6 pt-14 lg:px-8">
+    <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+      <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+    </div>
+    <div class="mx-auto max-w-1x2 py-1000 sm:py-48 lg:py-8">
+      <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+        <div class="relative rounded-full px-3 py-1 text-sm leading-60 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+          Que queres comer?. <a href="#" class="font-semibold text-indigo-80"><span class="absolute inset-0" aria-hidden="true"></span>Buscar <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+      <div >
+              <app-mapa></app-mapa>
+        
+        <div class="mt-10 flex items-center justify-center gap-x-6">
+          <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a>
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Learn more <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
+      <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+    </div>
+  </div>
+</div>
+ -->
+
+ 
+ <br>
+<div class="container" >
     <h1> Consultas</h1>
     <p>Por favor, déjanos tu consulta y te responderemos a la brevedad.</p>
     <form (ngSubmit)="enviarConsulta()" #consultaForm="ngForm">
-      <label for="consulta">Tu consulta:</label><br>
+      <label for="consulta"></label>
       <textarea id="consulta" name="consulta" [(ngModel)]="consulta" rows="5" cols="50" placeholder="Escribe tu consulta aquí" required></textarea><br><br>
 
       <button type="submit">Enviar Consulta</button>
     </form>
   </div>
+
+
+  
+
+
+
