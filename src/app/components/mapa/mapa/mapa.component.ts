@@ -42,7 +42,7 @@ export class MapaComponent implements OnInit {
       this.establecimientoService.getEstablecimiento().subscribe((establecimientos) => {
 
         this.establecimientos = establecimientos;
-        console.log(establecimientos);
+        
         this.googleMapsService.agregarMarcadores(this.establecimientos, mapa);
       })
     });

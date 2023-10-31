@@ -15,7 +15,7 @@ export class EstablecimientoComponent implements OnInit {
 
   ngOnInit(): void {
     this.establecimientoService.getEstablecimiento().subscribe(establecimientos => {
-      this.establecimientos = establecimientos;
+      this.establecimientos = establecimientos; // FUNCION SIN USO POR AHORA PORQUE SE UTILIZA LA DEL SERVICE
     })
   }
 
