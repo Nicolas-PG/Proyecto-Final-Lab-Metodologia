@@ -1,6 +1,6 @@
 <header class="bg-white dark:bg-gray-900">
-  <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-    <div class="flex h-16 items-center justify-between">
+  <div class="mx-auto max-w-screen-xl px-4 sm:px-7 lg:px-8">
+    <div class="flex h-12 items-center justify-between">
       <div class="md:flex md:items-center md:gap-12">
         <a class="block text-teal-600 dark:text-teal-600" href="/inicio">
           <span class="sr-only">Home</span>
@@ -59,15 +59,26 @@
              .
               </a>
             </li>
-
-            <li>
-              <a
-                class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                href="/"
+            <div>
+              <label for="HeadlineAct" class="block text-center font- text-gray-100">
+                Filtrar por:
+              </label>
+            
+              <select
+                name="HeadlineAct"
+                id="HeadlineAct"
+                class="mt-2.7 w-full rounded-lg border-gray-700 text-gray-600 sm:text-center"
               >
-                .
-              </a>
-            </li>
+                <option value="">Pizza</option>
+                <option value="JM">Empandas</option>
+                <option value="SRV">Asado</option>
+                <option value="JH">Tu vieja</option>
+                <option value="BBK">Tu hermana</option>
+                <option value="AK">Tu prima</option>
+                <option value="BG"></option>
+                <option value="EC"></option>
+              </select>
+            </div>
           </ul>
         </nav>
       </div>
