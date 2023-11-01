@@ -55,7 +55,7 @@ export class GoogleMapsService {
                   lng: position.coords.longitude},
                   map: map,
                   title: "Mi ubicación"
-              });                                            // FUNCION PARA AGREGAR MARCADOR A LA UBICACION
+              });                                            
 
               marker.addListener('click', function() {
                 
