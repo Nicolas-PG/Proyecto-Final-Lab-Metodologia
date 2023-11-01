@@ -19,7 +19,6 @@ import { FormsModule } from '@angular/forms';
 import { SignUpComponent } from './components/autenticacion/sign-up/sign-up.component';
 import { DashboardComponent } from './components/autenticacion/dashboard/dashboard.component';
 import { LoginComponent } from './components/autenticacion/login/login.component';
-
 import { ContactosComponent } from './components/contactos/contactos.component';
 import { PrincipalComponent } from './components/principal/principal.component';
 
@@ -48,9 +47,6 @@ import { PrincipalComponent } from './components/principal/principal.component';
     AngularFireStorageModule,
     provideAuth(() => getAuth()),
    
-    
-    
-
     
   ],
   providers: [
