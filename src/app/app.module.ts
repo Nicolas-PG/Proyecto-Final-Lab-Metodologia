@@ -21,6 +21,7 @@ import { DashboardComponent } from './components/autenticacion/dashboard/dashboa
 import { LoginComponent } from './components/autenticacion/login/login.component';
 import { ContactosComponent } from './components/contactos/contactos.component';
 import { PrincipalComponent } from './components/principal/principal.component';
+import { ComentariosComponent } from './components/comentarios/comentarios.component';
 
 
 
@@ -33,7 +34,8 @@ import { PrincipalComponent } from './components/principal/principal.component';
     SignUpComponent,
     DashboardComponent,
     ContactosComponent,
-    PrincipalComponent
+    PrincipalComponent,
+    ComentariosComponent
    
   ],
   imports: [

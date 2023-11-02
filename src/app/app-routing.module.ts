@@ -7,6 +7,7 @@ import { SignUpComponent } from './components/autenticacion/sign-up/sign-up.comp
 import { AuthGuard } from './shared/guards/auth.guard';
 import { PrincipalComponent } from './components/principal/principal.component';
 import { ContactosComponent } from './components/contactos/contactos.component';
+import { EstablecimientoComponent } from './components/establecimiento/establecimiento.component';
 
 
 const routes: Routes = [
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'signup', component: SignUpComponent },
   { path:'contactos',component:ContactosComponent},
-  { path:'principal',component:PrincipalComponent}
+  { path:'principal',component:PrincipalComponent},
+  { path:'establecimiento',component:EstablecimientoComponent}
 ];
 
 @NgModule({
