@@ -34,10 +34,18 @@ export class GoogleMapsService {
 
     botonGeolocalizacion(map: google.maps.Map): HTMLButtonElement{
       const locationButton = document.createElement("button");
-      locationButton.textContent = "Deslplazarse a la ubicación actual";
+      locationButton.textContent = "Mi ubicación";
       locationButton.classList.add("btn-map-location");
+      locationButton.style.backgroundColor = "white";
+      locationButton.style.color = "black";
+      locationButton.style.padding = "4px 5px";
+      locationButton.style.border = "none";
+      locationButton.style.borderRadius = "5px";
+      locationButton.style.cursor = "pointer";
+      locationButton.style.fontSize = "15px";
+      locationButton.style.fontWeight = "bold";
 
-      map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
+      map.controls[google.maps.ControlPosition.INLINE_END_BLOCK_START].push(locationButton);
 
       locationButton.addEventListener("click", () => {
       
@@ -61,14 +69,7 @@ export class GoogleMapsService {
                 
                 marker.setMap(null);
               });
-              
-
-              /*
-              const infoWindow = new google.maps.InfoWindow;
-              infoWindow.setPosition(pos);
-              infoWindow.setContent("Ubicacion encontrada.");
-              infoWindow.open(map);
-              */
+            
               map.setCenter(pos);
             },
             () => {

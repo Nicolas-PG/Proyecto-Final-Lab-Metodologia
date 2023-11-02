@@ -51,23 +51,37 @@
 
     <div class="flex items-center gap-4">
 
-      
+
 
       <div class="sm:flex sm:gap-4">
 
 
+        <select name="HeadlineAct" id="HeadlineAct"
+          class="mt-2.7 w-full rounded-lg border-gray-700 text-gray-600 sm:text-center">
+          <option disabled selected value="">Filtrar por</option>
+          <option value="">Pizza</option>
+          <option value="JM">Empandas</option>
+          <option value="SRV">Asado</option>
+          <option value="JH">Tu vieja</option>
+          <option value="BBK">Tu hermana</option>
+          <option value="AK">Tu prima</option>
+          <option value="BG"></option>
+          <option value="EC"></option>
+        </select>
+
+
         <a *ngIf="!isLoggedIn; else loggedIn"
-   class="rounded-xl bg-red-500 px-5 py-2.5 text-sm font-medium text-white shadow dark:hover:bg-red-400"
-   [routerLink]="'/login'">
-   Ingresar
-</a>
-<ng-template #loggedIn>
-  <button class="rounded-xl bg-red-500 px-5 py-2.5 text-sm font-medium text-white shadow dark:hover:bg-red-400"
-          [type]="isLoggedIn ? 'button' : 'submit'" (click)="logOut()">
-    Salir
-  </button>
-  
-</ng-template>
+          class="rounded-xl bg-red-500 px-5 py-2.5 text-sm font-medium text-white shadow dark:hover:bg-red-400"
+          [routerLink]="'/login'">
+          Ingresar
+        </a>
+        <ng-template #loggedIn>
+          <button class="rounded-xl bg-red-500 px-5 py-2.5 text-sm font-medium text-white shadow dark:hover:bg-red-400"
+            [type]="isLoggedIn ? 'button' : 'submit'" (click)="logOut()">
+            Salir
+          </button>
+
+        </ng-template>
 
 
 
