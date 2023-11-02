@@ -65,8 +65,8 @@
           <option value="JH">Tu vieja</option>
           <option value="BBK">Tu hermana</option>
           <option value="AK">Tu prima</option>
-          <option value="BG"></option>
-          <option value="EC"></option>
+          <!-- <option value="BG"></option>
+          <option value="EC"></option> -->
         </select>
 
 
@@ -90,10 +90,11 @@
 
 
         <div class="hidden sm:flex">
-          <a class="rounded-xl bg-red-500 px-5 py-2.5 text-sm font-medium text-white shadow dark:hover:bg-red-400"
-            href="/signup">
-            Registrarse
-          </a>
+          <ng-container *ngIf="!isLoggedIn;">
+            <a class="rounded-xl bg-red-500 px-5 py-2.5 text-sm font-medium text-white shadow dark:hover:bg-red-400" href="/signup">
+              Registrarse
+            </a>
+          </ng-container> 
         </div>
       </div>
 

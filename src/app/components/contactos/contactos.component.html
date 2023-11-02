@@ -1,26 +1,30 @@
 
 <app-principal></app-principal>
-<section class="bg-gray-50 dark:bg-gray-200 mt-0">
- <br>
-<div class="container" >
-    <h1> Consultas</h1>
-    <p>Por favor, déjanos tu consulta y te responderemos a la brevedad.</p>
-    <form (ngSubmit)="enviarConsulta()" #consultaForm="ngForm">
-      <label for="consulta"></label>
-      <textarea id="consulta" name="consulta" [(ngModel)]="consulta" rows="5" cols="50" placeholder="Escribe tu consulta aquí" required></textarea><br><br>
+<section class="bg-gradient-to-r from-red-200 to-orange-300">
+  <div class="flex flex-col items-center justify-center ">
+    <img class="w-45" src="./assets/images/logopatineta.png" alt="logo">
+    <div class="container" >
+        <h1> Consultas</h1>
+        <p>Por favor, déjanos tu consulta y te responderemos a la brevedad.</p>
+        <form (ngSubmit)="enviarConsulta()" #consultaForm="ngForm">
+          <label for="consulta"></label>
+          <textarea id="consulta" name="consulta" [(ngModel)]="consulta" rows="5" cols="50" placeholder="Escribe tu consulta aquí" required></textarea><br><br>
+    
+          <button type="submit">Enviar Consulta</button>
+        </form>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br> 
+      <br>
+      <br>
+      <br>
+  </div>  
 
-      <button type="submit">Enviar Consulta</button>
-    </form>
-  </div>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br> 
-  <br>
-  <br>
-  <br>
+ 
 </section>
 
   
