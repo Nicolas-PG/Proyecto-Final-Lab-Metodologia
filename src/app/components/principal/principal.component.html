@@ -71,12 +71,12 @@
 
 
         <a *ngIf="!isLoggedIn; else loggedIn"
-          class="rounded-xl bg-red-500 px-5 py-2.5 text-sm font-medium text-white shadow dark:hover:bg-red-400"
+          class="rounded-xl bg-custom-100 px-5 py-2.5 text-sm font-medium text-white shadow dark:hover:bg-red-500"
           [routerLink]="'/login'">
           Ingresar
         </a>
         <ng-template #loggedIn>
-          <button class="rounded-xl bg-red-500 px-5 py-2.5 text-sm font-medium text-white shadow dark:hover:bg-red-400"
+          <button class="rounded-xl bg-custom-100 px-5 py-2.5 text-sm font-medium text-white shadow dark:hover:bg-red-500"
             [type]="isLoggedIn ? 'button' : 'submit'" (click)="logOut()">
             Salir
           </button>
@@ -91,7 +91,7 @@
 
         <div class="hidden sm:flex">
           <ng-container *ngIf="!isLoggedIn;">
-            <a class="rounded-xl bg-red-500 px-5 py-2.5 text-sm font-medium text-white shadow dark:hover:bg-red-400" href="/signup">
+            <a class="rounded-xl bg-custom-100 px-5 py-2.5 text-sm font-medium text-white shadow dark:hover:bg-red-500" href="/signup">
               Registrarse
             </a>
           </ng-container> 
