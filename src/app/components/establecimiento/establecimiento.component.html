@@ -1,16 +1,18 @@
 <app-principal></app-principal>
-<div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
-    <div class="h-32 rounded-lg bg-gray-200">
-        <img src="https://banderitaparrilla.com/wp-content/uploads/2021/12/DSC_4561.jpg" alt="logo">
-        <p>BANDERITA</p>
+<section class="bg-gradient-to-r from-red-50 to-orange-100">
+    <div class="grid grid-cols-4 gap-10 mx-24">
+      <ng-container *ngFor="let card of establecimientosPruebaFront">
+        <div class="relative group mt-10">
+          <div class="rounded-t-2xl overflow-hidden">
+            <div class="w-full h-64 overflow-hidden transform transition-transform group-hover:scale-110">
+              <img class="w-full h-full object-cover" src="{{card.img}}" alt="logo  + {{card.nombre}}">
+            </div>
+          </div>
+          <div class="p-4 bg-orange-200  text-center rounded-b-2xl">
+            <p class="text-xl font-bold">{{card.nombre}}</p>
+            <p class="text-m">{{card.direccion}}</p>
+          </div>
+        </div>
+      </ng-container>
     </div>
-    <div class="h-32 rounded-lg bg-gray-200">
-        <img src="https://banderitaparrilla.com/wp-content/uploads/2021/12/DSC_4561.jpg" class="rounded-xl"  alt="logo">
-        <p>BANDERITA</p>
-    </div>
-    <div class="h-32 rounded-lg bg-gray-200">
-        <img src="" alt="logo">
-        <p>BANDERITA</p>
-    </div>
-   
-  </div>
+  </section>
