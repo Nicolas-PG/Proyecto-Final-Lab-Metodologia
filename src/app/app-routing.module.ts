@@ -8,6 +8,7 @@ import { AuthGuard } from './shared/guards/auth.guard';
 import { PrincipalComponent } from './components/principal/principal.component';
 import { ContactosComponent } from './components/contactos/contactos.component';
 import { EstablecimientoComponent } from './components/establecimiento/establecimiento.component';
+import { ComentariosComponent } from './components/comentarios/comentarios.component';
 
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'signup', component: SignUpComponent },
   { path:'contactos',component:ContactosComponent},
   { path:'principal',component:PrincipalComponent},
-  { path:'establecimiento',component:EstablecimientoComponent}
+  { path:'establecimiento',component:EstablecimientoComponent},
+  { path:'comentarios',component:ComentariosComponent}
 ];
 
 @NgModule({
