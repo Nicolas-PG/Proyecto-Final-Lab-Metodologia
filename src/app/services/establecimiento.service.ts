@@ -14,6 +14,7 @@ export class EstablecimientoService {
 
   constructor(private firestore: AngularFirestore, private storage: Storage = inject(Storage)) { }
 
+  
   guardarEstablecimiento(establecimiento: Establecimiento): Promise<any> {
   
    return this.firestore.collection('establecimiento').add(establecimiento); // QUIZAS NO LA USEMOS
@@ -26,11 +27,15 @@ export class EstablecimientoService {
      
   }
 
+  
+
   getImagenes(rutaImagen: string):Promise<string>{
     const storageRef = ref(this.storage, rutaImagen);
     return getDownloadURL(storageRef);
   
   }
+  
+  
 
   getEstablecimientosConIds(): Observable<any[]> {
     return this.firestore.collection('Establecimientos').snapshotChanges()

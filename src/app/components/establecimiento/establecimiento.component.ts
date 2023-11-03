@@ -17,6 +17,7 @@ export class EstablecimientoComponent implements OnInit {
   constructor(private establecimientoService : EstablecimientoService){}
 
   ngOnInit(): void {
+    
     this.establecimientoService.getEstablecimientosConIds()
       .subscribe(establecimientos => {
         this.establecimientos = establecimientos;
@@ -31,7 +32,7 @@ export class EstablecimientoComponent implements OnInit {
             if(url !== null && establecimiento.id === rutaSinExtension){
               establecimiento.imagenUrl = url;
               
-              
+              console.log(establecimiento)
             }else {
               console.log('La ruta de la imagen no coincide con la ID del establecimiento.');
             }
@@ -40,7 +41,10 @@ export class EstablecimientoComponent implements OnInit {
           .catch((error: any )=> {
             console.error('Error al obtener la URL de la imagen:', error);
           });
+          
+          
         })
+        
         
       });
 

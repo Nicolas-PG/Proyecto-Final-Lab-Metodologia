@@ -13,7 +13,7 @@ import { FirestoreModule } from '@angular/fire/firestore';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
 import { EstablecimientoService } from './services/establecimiento.service';
-import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFireStorage, AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { FormsModule } from '@angular/forms';
 import { SignUpComponent } from './components/autenticacion/sign-up/sign-up.component';
@@ -23,6 +23,9 @@ import { ContactosComponent } from './components/contactos/contactos.component';
 import { PrincipalComponent } from './components/principal/principal.component';
 import { ComentariosComponent } from './components/comentarios/comentarios.component';
 import { getStorage, provideStorage } from '@angular/fire/storage';
+
+
+
 
 
 
@@ -50,6 +53,9 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
     AngularFireStorageModule,
     provideAuth(() => getAuth()),
     provideStorage(() => getStorage()),
+    
+
+    
     
    
    
