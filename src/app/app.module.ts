@@ -22,6 +22,7 @@ import { LoginComponent } from './components/autenticacion/login/login.component
 import { ContactosComponent } from './components/contactos/contactos.component';
 import { PrincipalComponent } from './components/principal/principal.component';
 import { ComentariosComponent } from './components/comentarios/comentarios.component';
+import { getStorage, provideStorage } from '@angular/fire/storage';
 
 
 
@@ -48,6 +49,9 @@ import { ComentariosComponent } from './components/comentarios/comentarios.compo
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireStorageModule,
     provideAuth(() => getAuth()),
+    provideStorage(() => getStorage()),
+    
+   
    
     
   ],
