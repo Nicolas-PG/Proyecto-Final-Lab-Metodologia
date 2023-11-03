@@ -48,6 +48,8 @@ export class EstablecimientoComponent implements OnInit {
         
       });
 
+      
+
     
 
      /* 
@@ -74,6 +76,10 @@ export class EstablecimientoComponent implements OnInit {
     
     */
       
+  }
+
+  redirectToUrl(url: string): void {
+    window.open(url, '_blank');
   }
 
   
