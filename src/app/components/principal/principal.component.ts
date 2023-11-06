@@ -10,7 +10,9 @@ export class PrincipalComponent {
 
   isLoggedIn: boolean;
   mostrarFiltro: boolean = false;
+  userInfo
 
+ 
 
   constructor(private authService: AuthService, private router: Router) {
 
@@ -21,6 +23,10 @@ export class PrincipalComponent {
     })
 
     this.isLoggedIn = authService.isLoggedIn;
+    this.userInfo = authService.userData;
+
+    console.log("aca")
+    console.log(this.userInfo);
   }
 
   logOut() {
