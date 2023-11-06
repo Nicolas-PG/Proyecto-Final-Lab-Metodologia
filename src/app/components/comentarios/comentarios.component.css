@@ -1,0 +1,11 @@
+.word-wrap {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+#comentarios {
+  background-color: #f0f0f0; 
+  border: 1rem solid #ccc; 
+  border-radius: 10px; 
+  padding: 8px; 
+  text-align: center; }

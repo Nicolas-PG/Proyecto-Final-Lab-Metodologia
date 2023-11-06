@@ -1,4 +1,35 @@
 <app-principal></app-principal>
-<section class="bg-gradient-to-r from-red-200 to-orange-300 h-screen">
+
+
+<section class="bg-gradient-to-r from-red-200 to-orange-300 min-h-screen flex flex-col">
     
-</section>
+    <div class="flex flex-col justify-center items-center px-4 md:px-0" >
+        <br>
+      <div class="comment-container bg-gray-900 rounded-md p-4 md:p-0">
+        <br>
+        <h2 class="text-white text-center md:text-left mb-4" *ngIf= isLoggedIn>Agregar Comentario</h2>
+
+        <div class="bg-white rounded-md p-2" *ngIf= isLoggedIn>
+            <br>
+        
+           
+
+          <textarea [(ngModel)]="newComment" placeholder="Escribe tu comentario" class="comment-input w-full" rows="4" style="resize: vertical;"></textarea>
+          <div class="text-center md:text-left mt-4">
+            <button (click)="addComment()" class="comment-button bg-blue-500 text-white rounded-md px-2 py-1">Enviar</button>
+          </div>
+        </div>
+      </div>
+      <h2 id="comentarios" class="text-center md:text-left mt-4">Comentarios</h2>
+      <div class="comment-list grid grid-cols-1 md:grid-cols-5 gap-4 mt-4">
+        <div *ngFor="let comment of comments" class="comment-box p-4 bg-white rounded-md word-wrap">
+          <p class="text-gray-700">
+            {{ comment }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
