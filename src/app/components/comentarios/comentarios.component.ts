@@ -24,9 +24,21 @@ export class ComentariosComponent {
   addComment() {
     if (this.newComment) {
   
-      this.comentarioData.url = this.user.photoURL;
-      this.comentarioData.nombre = this.user.displayName;
+   
       this.comentarioData.comentario=this.newComment;
+      if (this.user.photoURL) {
+        this.comentarioData.url = this.user.photoURL;
+      } else {
+        
+        this.comentarioData.url = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6DvZYTn07oaUANbmmZPCgDVL7xeTInBZIuY5yXZQ7KgacmaMlczodfhedAwhGHf3moeE&usqp=CAU';
+      }
+
+      if (this.user.displayName) {
+        this.comentarioData.nombre = this.user.displayName;
+      } else {
+ 
+        this.comentarioData.nombre = 'MorfoUsario';
+      }
   
 
       this.comments.push(this.comentarioData);
