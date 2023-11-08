@@ -1,6 +1,13 @@
 import { Component } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 
+interface ComentarioData {
+  url: string;
+  nombre: string;
+  comentario: string;
+  fecha:string;
+}
+
 @Component({
   selector: 'app-comentarios',
   templateUrl: './comentarios.component.html',
@@ -12,7 +19,8 @@ export class ComentariosComponent {
   comentarioData: ComentarioData = {
     url: '',
     nombre: '',
-    comentario: ''
+    comentario: '',
+    fecha:''
   };
  
 
@@ -26,13 +34,14 @@ export class ComentariosComponent {
       const currentDate = new Date();
       const commentDate = currentDate.toLocaleDateString(); 
       
-      const fullComment = `${commentDate}\n${this.newComment}`;
+      /* const fullComment = `${commentDate}\n${this.newComment}`; */
   
       
       const newCommentData: ComentarioData = {
         url: this.user.photoURL || 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6DvZYTn07oaUANbmmZPCgDVL7xeTInBZIuY5yXZQ7KgacmaMlczodfhedAwhGHf3moeE&usqp=CAU',
         nombre: this.user.displayName || 'MorfoUsario',
-        comentario: fullComment
+        comentario: this.newComment,
+        fecha:commentDate
       };
   
       
@@ -60,8 +69,3 @@ export class ComentariosComponent {
 }
 
 
-interface ComentarioData {
-  url: string;
-  nombre: string;
-  comentario: string;
-}
