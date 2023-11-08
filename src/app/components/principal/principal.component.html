@@ -58,12 +58,9 @@
 
     <div class="flex items-center gap-4">
 
-
-
       <div class="sm:flex sm:gap-4">
 
-
-        <select name="HeadlineAct" id="HeadlineAct"
+        <select *ngIf="mostrarFiltro" name="HeadlineAct" id="HeadlineAct"
           class="mt-2.7 w-full rounded-lg border-gray-700 text-gray-600 sm:text-center">
           <option disabled selected value="">Filtrar por</option>
           <option value="">Pizza</option>
@@ -89,12 +86,6 @@
           </button>
 
         </ng-template>
-
-
-
-
-
-
 
         <div class="hidden sm:flex">
           <ng-container *ngIf="!isLoggedIn;">
