@@ -5,44 +5,42 @@
     <div class="md:flex md:items-center md:gap-12">
       <a class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
         href="/inicio">
-        <img class="w-44" src="./assets/images/logoSkate.png" alt="logo">
-        <!-- <svg class="h-10" viewBox="0 0 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <text x="10" y="30" font-family="arial" font-size="25" fill="white">Qmorfo</text>
-          </svg> -->
+        <img class="w-44" src="./assets/images/logoQmorfo.png" alt="logo">
+       
       </a>
 
       <nav aria-label="Global">
-        <ul class="flex items-center gap-3 ">
-          <li>
-            <a class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+        <ul class="flex items-center gap-6 ml-[-2rem] ">
+          <li class="m">
+            <a class="text-gray-500  font-semibold transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
               href="/contactos">
               Contactanos
             </a>
           </li>
 
           <li>
-            <a class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+            <a class="text-gray-500 font-semibold transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
               href="/establecimiento">
               Locales
             </a>
           </li>
 
           <li>
-            <a class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+            <a class="text-gray-500 font-semibold transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
               href="/inicio">
               Mapa
             </a>
           </li>
-          
+
           <li>
-            <a class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+            <a class="text-gray-500 font-semibold transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
               href="/comentarios">
               Comentarios
             </a>
           </li>
 
           <li>
-            <a class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+            <a class="text-gray-500 font-semibold transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
               href="/">
               Sumate
             </a>
@@ -62,19 +60,20 @@
 
       <div class="sm:flex sm:gap-4">
 
+        <div *ngIf="mostrarFiltro" class="flex items-center gap-4">
 
-        <select name="HeadlineAct" id="HeadlineAct"
-          class="mt-2.7 w-full rounded-lg border-gray-700 text-gray-600 sm:text-center">
-          <option disabled selected value="">Filtrar por</option>
-          <option value="">Pizza</option>
-          <option value="JM">Empandas</option>
-          <option value="SRV">Asado</option>
-          <option value="JH">Tu vieja</option>
-          <option value="BBK">Tu hermana</option>
-          <option value="AK">Tu prima</option>
-          <!-- <option value="BG"></option>
-          <option value="EC"></option> -->
-        </select>
+          <select name="HeadlineAct" id="HeadlineAct"
+            class="mt-2.7 w-full rounded-lg border-gray-700 text-gray-600 sm:text-center">
+            <option disabled selected value="">Filtrar por</option>
+            <option value="">Pizza</option>
+            <option value="JM">Empandas</option>
+            <option value="SRV">Asado</option>
+            <option value="JH">Tu vieja</option>
+            <option value="BBK">Tu hermana</option>
+            <option value="AK">Tu prima</option>
+      
+          </select>
+        </div>
 
 
         <a *ngIf="!isLoggedIn; else loggedIn"
@@ -83,7 +82,8 @@
           Ingresar
         </a>
         <ng-template #loggedIn>
-          <button class="rounded-xl bg-custom-100 px-5 py-2.5 text-sm font-medium text-white shadow dark:hover:bg-red-500"
+          <button
+            class="rounded-xl bg-custom-100 px-5 py-2.5 text-sm font-medium text-white shadow dark:hover:bg-red-500"
             [type]="isLoggedIn ? 'button' : 'submit'" (click)="logOut()">
             Salir
           </button>
@@ -98,10 +98,11 @@
 
         <div class="hidden sm:flex">
           <ng-container *ngIf="!isLoggedIn;">
-            <a class="rounded-xl bg-custom-100 px-5 py-2.5 text-sm font-medium text-white shadow dark:hover:bg-red-500" href="/signup">
+            <a class="rounded-xl bg-custom-100 px-5 py-2.5 text-sm font-medium text-white shadow dark:hover:bg-red-500"
+              href="/signup">
               Registrarse
             </a>
-          </ng-container> 
+          </ng-container>
         </div>
       </div>
 
