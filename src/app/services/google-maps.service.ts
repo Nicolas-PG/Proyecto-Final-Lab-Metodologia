@@ -108,7 +108,7 @@ export class GoogleMapsService {
     this.limpiarMarcadores();
     var iconBase = 'assets/images/';
     establecimientos.forEach(establecimiento => {
-      if (!categoriaFiltro || establecimiento.categorias.includes(categoriaFiltro)) {
+      if (!categoriaFiltro || categoriaFiltro === 'todo' || establecimiento.categorias.includes(categoriaFiltro)) {
 
         const marker = new google.maps.Marker({
           position: { lat: establecimiento.latitud, lng: establecimiento.longitud },
