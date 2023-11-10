@@ -52,20 +52,12 @@ export class ComentariosComponent {
     }
   }
   
-
-
   constructor(private authService: AuthService) {
 
     this.isLoggedIn = authService.isLoggedIn;
   this.user=JSON.parse(localStorage.getItem('user')!);
+
+  console.log(this.user)
   }
 
-
- 
-
-
-
-
 }
-
-

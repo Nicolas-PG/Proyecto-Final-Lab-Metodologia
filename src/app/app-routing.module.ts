@@ -13,7 +13,7 @@ import { ComentariosComponent } from './components/comentarios/comentarios.compo
 
 const routes: Routes = [
   { path: 'inicio', component: MapaComponent },
-  { path: '', redirectTo: 'Login', pathMatch: 'full' },
+  { path: '', component: MapaComponent },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignUpComponent },
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
