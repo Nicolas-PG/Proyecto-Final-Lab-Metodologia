@@ -6,7 +6,7 @@
       <a class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
         href="/inicio">
         <img class="w-44" src="./assets/images/logoQmorfo.png" alt="logo">
-       
+
       </a>
 
       <nav aria-label="Global">
@@ -59,18 +59,18 @@
       <div class="sm:flex sm:gap-4">
 
 
-        <select name="HeadlineAct" id="HeadlineAct" (change)="onCategoriaSeleccionada($event)"
-          class="mt-2.7 w-full rounded-lg border-gray-700 text-gray-600 sm:text-center">
-          <option disabled selected value="">Filtrar por</option>
-          <option value="cafe">Cafe</option>
-          <option value="restaurante">Restaurantes</option>
-          <option value="hamburguesa">Hamburguesa</option>
-          <option value="JH">Tu vieja</option>
-          <option value="BBK">Tu hermana</option>
-          <option value="AK">Tu prima</option>
-          <!-- <option value="BG"></option>
-          <option value="EC"></option> -->
-        </select>
+        <div *ngIf="mostrarFiltro" class="sm:flex sm:gap-4">
+          <select name="HeadlineAct" id="HeadlineAct" (change)="onCategoriaSeleccionada($event)"
+            class="mt-2.7 w-full rounded-lg border-gray-700 text-gray-600 sm:text-center">
+            <option disabled selected value="">Filtrar por</option>
+            <option value="cafe">Cafe</option>
+            <option value="restaurante">Restaurantes</option>
+            <option value="hamburguesa">Hamburguesa</option>
+            <option value="JH">Tu vieja</option>
+            <option value="BBK">Tu hermana</option>
+            <option value="AK">Tu prima</option>
+          </select>
+        </div>
 
 
         <a *ngIf="!isLoggedIn; else loggedIn"
