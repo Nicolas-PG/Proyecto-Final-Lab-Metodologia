@@ -23,6 +23,7 @@ import { ContactosComponent } from './components/contactos/contactos.component';
 import { PrincipalComponent } from './components/principal/principal.component';
 import { ComentariosComponent } from './components/comentarios/comentarios.component';
 import { getStorage, provideStorage } from '@angular/fire/storage';
+import { EventService } from './services/event-service';
 
 
 
@@ -64,6 +65,7 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
   providers: [
     GoogleMapsService,
     EstablecimientoService,
+    EventService
     
   ],
   bootstrap: [AppComponent]

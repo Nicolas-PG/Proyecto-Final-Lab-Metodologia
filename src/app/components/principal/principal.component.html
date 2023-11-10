@@ -59,12 +59,12 @@
       <div class="sm:flex sm:gap-4">
 
 
-        <select name="HeadlineAct" id="HeadlineAct"
+        <select name="HeadlineAct" id="HeadlineAct" (change)="onCategoriaSeleccionada($event)"
           class="mt-2.7 w-full rounded-lg border-gray-700 text-gray-600 sm:text-center">
           <option disabled selected value="">Filtrar por</option>
-          <option value="">Pizza</option>
-          <option value="JM">Empandas</option>
-          <option value="SRV">Asado</option>
+          <option value="cafe">Cafe</option>
+          <option value="restaurante">Restaurantes</option>
+          <option value="hamburguesa">Hamburguesa</option>
           <option value="JH">Tu vieja</option>
           <option value="BBK">Tu hermana</option>
           <option value="AK">Tu prima</option>
