@@ -78,6 +78,7 @@ export class AuthService {
     return this.firebaseAuthenticationService.signOut().then(() => {
       localStorage.removeItem('user');
       this.router.navigate(['inicio']);
+      location.reload();
     })
   }
 
