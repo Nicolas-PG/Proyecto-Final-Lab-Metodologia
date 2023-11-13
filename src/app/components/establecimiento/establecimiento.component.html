@@ -2,7 +2,7 @@
 
 
 <section class="bg-gradient-to-r from-red-200 to-orange-300 min-h-screen">
-  <div class="grid grid-cols-4 gap-10 mx-24">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 mx-24">
     <ng-container *ngFor="let establecimiento of establecimientos">
       <div class="relative group mt-10" (click)="redirectToUrl(establecimiento.redes)" style="cursor: pointer;">
         <div class="rounded-t-2xl overflow-hidden">
