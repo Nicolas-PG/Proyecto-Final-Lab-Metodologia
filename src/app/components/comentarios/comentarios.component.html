@@ -1,9 +1,6 @@
 <app-principal></app-principal>
-
-<!--  buscar forma para que cuando este en la pestaña comentarios y se loguea, vuelva a esa pestaña 
-      arreglar exceso de texto en li-->
       
-<section class="bg-gradient-to-r from-red-200 to-orange-300 h-screen flex flex-col ">
+<section class="bg-gradient-to-r from-red-200 to-orange-300 min-h-screen flex flex-col ">
   
   <div class="bg-orange-400 p-6 rounded-lg m-10">
 
@@ -23,7 +20,8 @@
                 </div>
         
                 <div class="w-full ml-2">
-                  <p class="text-gray-900 justify-self-center text-left">{{comment.comentario}}</p>
+                  <!-- <p class="text-gray-900 justify-self-center text-left overflow-hidden overflow-ellipsis max-h-24 whitespace-pre-wrap  break-all">{{comment.comentario}}</p> -->
+                  <p class="text-gray-900 justify-self-center text-left overflow-hidden overflow-ellipsis max-h-screen whitespace-pre-wrap break-all">{{comment.comentario}}</p>
                 </div>
               </div>
           </li>
@@ -48,8 +46,3 @@
   </div>
 
 </section>
-
-
-
-<br>
-<br>
