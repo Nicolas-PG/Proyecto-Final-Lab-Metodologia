@@ -1,6 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { Firestore, collection } from '@angular/fire/firestore';
-import { Establecimiento } from '../models/establecimiento';
+import { Establecimiento } from 'src/app/models/establecimiento'; 
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { Observable, map } from 'rxjs';
 import { AngularFireStorage } from '@angular/fire/compat/storage';

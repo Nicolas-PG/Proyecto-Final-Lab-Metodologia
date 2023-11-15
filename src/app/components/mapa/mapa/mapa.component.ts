@@ -1,9 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { GoogleMapsService } from 'src/app/services/google-maps.service';
+import { GoogleMapsService } from 'src/app/services/mapa/google-maps.service';
 import { EstablecimientoComponent } from '../../establecimiento/establecimiento.component';
 import { Establecimiento } from 'src/app/models/establecimiento';
-import { EstablecimientoService } from 'src/app/services/establecimiento.service';
-import { EventService } from 'src/app/services/event-service';
+import { EstablecimientoService } from 'src/app/services/establecimiento/establecimiento.service';
+import { EventService } from 'src/app/services/events/event-service';
 
 @Component({
   selector: 'app-mapa',

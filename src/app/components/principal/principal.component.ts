@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { AuthService } from 'src/app/services/auth.service';
+import { AuthService } from 'src/app/services/auth/auth.service';
 import { Router, NavigationEnd } from '@angular/router';
-import { EventService } from 'src/app/services/event-service';
+import { EventService } from 'src/app/services/events/event-service';
 @Component({
   selector: 'app-principal',
   templateUrl: './principal.component.html',

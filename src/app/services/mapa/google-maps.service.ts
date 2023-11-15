@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Loader } from '@googlemaps/js-api-loader';
 import { map } from 'rxjs';
 import { environment } from 'src/environments/environment.development';
-import { Establecimiento } from '../models/establecimiento';
+import { Establecimiento } from '../../models/establecimiento';
 
 @Injectable({
   providedIn: 'root'
@@ -138,6 +138,7 @@ export class GoogleMapsService {
         marker.addListener('click', () => {
           infoWindow.open(mapa, marker);
         });
+        
         this.marcadores.push(marker);
       }
       
