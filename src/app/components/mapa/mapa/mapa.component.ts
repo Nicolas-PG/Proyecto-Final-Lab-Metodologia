@@ -30,7 +30,7 @@ export class MapaComponent implements OnInit {
 
     this.googleMapsService.cargarMapa(mapElement as HTMLElement, {
       center:{lat:-38.005614285436465, lng:-57.54347888235542}, 
-      zoom:14,
+      zoom:13,
       styles: [
         {
           featureType: "poi",

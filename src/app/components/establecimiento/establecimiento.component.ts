@@ -20,9 +20,12 @@ export class EstablecimientoComponent implements OnInit {
     
     this.establecimientoService.getEstablecimientosConIds()
       .subscribe(establecimientos => {
-        this.establecimientos = establecimientos;
+        this.establecimientos = establecimientos.filter(establecimiento => 
+          establecimiento.redes && Object.keys(establecimiento.redes).length > 0
+        );
         this.establecimientos.forEach(establecimiento =>{
-          
+
+            console.log(establecimiento.redes )
           const rutaImagen = `locales/${establecimiento.id}.jpg`;
           const rutaSinExtension = rutaImagen.replace(/^locales\//, '').replace(/\.jpg$/, '');
     
@@ -41,7 +44,6 @@ export class EstablecimientoComponent implements OnInit {
           .catch((error: any )=> {
             console.error('Error al obtener la URL de la imagen:', error);
           });
-          
           
         })
         

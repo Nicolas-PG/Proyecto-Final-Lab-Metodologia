@@ -165,7 +165,7 @@ export class GoogleMapsService {
         case 'cafe':
           return 'markCafe.png';
 
-        case 'hamburguesa':
+        case 'bar':
           return 'markBurger.png';
 
         case 'restaurante':
