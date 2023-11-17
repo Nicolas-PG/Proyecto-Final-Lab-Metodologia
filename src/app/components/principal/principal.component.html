@@ -1,5 +1,6 @@
 <header class="bg-orange-400 mt-0">
   <div class="flex h-12 items-center justify-between">
+    
     <div class="flex items-center space-x-1">
 
       <button type="button"
@@ -54,6 +55,7 @@
           </li>
         </ul>
       </nav>
+
     </div>
 
     <div class="flex items-center space-x-4">
@@ -73,18 +75,19 @@
         </div>
 
         <div class="hidden sm:flex items-center space-x-4">
-          <a *ngIf="!isLoggedIn; else loggedIn"
+          <a *ngIf="!isLoggedIn;"
             class="rounded-xl bg-custom-100 px-3 py-2 text-sm font-medium text-white shadow dark:hover:bg-red-500 sm:px-5"
             [routerLink]="'/login'">
             Ingresar
           </a>
-          <ng-template #loggedIn>
+          
+          <ng-container *ngIf="isLoggedIn;">
             <button
               class="rounded-xl bg-custom-100 px-3 py-2 text-sm font-medium text-white shadow dark:hover:bg-red-500 sm:px-5"
               [type]="isLoggedIn ? 'button' : 'submit'" (click)="logOut()">
               Salir
             </button>
-          </ng-template>
+          </ng-container>
 
 
           <ng-container *ngIf="!isLoggedIn;">
@@ -98,7 +101,7 @@
     </div>
   </div>
 
-  <div class="sm:hidden w-full" id="mobile-menu" *ngIf="mostrarMenuMovil">
+  <div class="sm:hidden w-28" id="mobile-menu" *ngIf="mostrarMenuMovil">
     <div class="space-y-1 px-2 pb-3 pt-2">
       <a href="/contactos"
         class="text-gray-500 font-semibold transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75 block rounded-md px-3 py-2 text-base">Contactanos</a>
@@ -109,20 +112,19 @@
       <a href="/comentarios"
         class="text-gray-500 font-semibold transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75 block rounded-md px-3 py-2 text-base">Comentarios</a>
 
-      <a *ngIf="!isLoggedIn; else loggedIn"
+      <a *ngIf="!isLoggedIn;"
         class="text-gray-500 font-semibold transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75 block rounded-md px-3 py-2 text-base"
         [routerLink]="'/login'">
         Ingresar
       </a>
       
-      <ng-template #loggedIn>
-        <button
-          class="text-gray-500 font-semibold transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75 block rounded-md px-3 py-2 text-base"
-          [type]="isLoggedIn ? 'button' : 'submit'" (click)="logOut()">
+      <ng-container *ngIf="isLoggedIn;">
+        <a class="text-gray-500 font-semibold transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75 block rounded-md px-3 py-2 text-base"
+          (click)="logOut()">
           Salir
-        </button>
-      </ng-template>
-
+        </a>
+      </ng-container>
+      
       <ng-container *ngIf="!isLoggedIn;">
         <a class="text-gray-500 font-semibold transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75 block rounded-md px-3 py-2 text-base"
           href="/signup">
