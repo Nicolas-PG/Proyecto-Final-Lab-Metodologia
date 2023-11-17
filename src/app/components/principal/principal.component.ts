@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, Output } from '@angular/core';
 import { AuthService } from 'src/app/services/auth/auth.service';
 import { Router, NavigationEnd } from '@angular/router';
 import { EventService } from 'src/app/services/events/event-service';
@@ -10,7 +10,7 @@ import { EventService } from 'src/app/services/events/event-service';
 export class PrincipalComponent {
 
   isLoggedIn: boolean;
-  mostrarFiltro: boolean = false;
+  mostrarFiltro = false;
   userInfo
 
   
@@ -42,6 +42,18 @@ export class PrincipalComponent {
     this.eventService.emitirCategoriaSeleccionada(categoria)
     
   }
+
+  
+
+  
+
+  public mostrarMenuMovil: boolean = false;
+
+  public toggleMenuMovil(): void {
+    this.mostrarMenuMovil = !this.mostrarMenuMovil;
+  }
+  
+  
 
   
 
