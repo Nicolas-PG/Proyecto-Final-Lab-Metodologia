@@ -11,6 +11,7 @@ export class GoogleMapsService {
 
   private loader: Loader;
   private marcadores: google.maps.Marker[] = [];
+  private infoWindowAbierto?: google.maps.InfoWindow;
 
 
 
@@ -135,8 +136,17 @@ export class GoogleMapsService {
           content: infoWindowContentent
         });
 
+        
+
         marker.addListener('click', () => {
+
+          if (this.infoWindowAbierto) {
+            this.infoWindowAbierto.close();
+          }
+
           infoWindow.open(mapa, marker);
+          this.infoWindowAbierto = infoWindow;
+
         });
         
         this.marcadores.push(marker);
